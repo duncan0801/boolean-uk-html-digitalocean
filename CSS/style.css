@@ -13,11 +13,14 @@ a {
 
 :root {
     --doBlue: #006aff;
+    --heading: #01214e;
+    --text-grey: #706f6f;
+     
 }
 
 .wrapper {
-    max-width: 1400px;
-    margin: 0 10%;
+    max-width: 100%;
+    padding: 0 10%;
 }
 
 /* NAV BAR */
@@ -69,9 +72,12 @@ header .top-nav {
 .description {
     background-image: url(//d9hhrg4mnvzow.cloudfront.net/try.digitalocean.com/developerbrand/4fae3026-bg-hero-do-v4.svg);
 
-    height: 50vh;
+    height: fit-content;
 
     overflow: hidden;
+
+    display: grid;
+    place-items: center;
 }
 .description .wrapper {
     display: grid;
@@ -85,7 +91,7 @@ header .top-nav {
     margin-top: 10px;
     margin-bottom: 10px;
 
-    height: fit-content;
+    height: 100%;
 }
 
 .information {
@@ -94,6 +100,7 @@ header .top-nav {
 
     display: grid;
     place-items: center;
+  
 }
 .information .title {
     font-size: 44px;
@@ -141,6 +148,7 @@ header .top-nav {
 .cta .container h3 {
     font-size: 30px;
     text-align: center;
+    color: var(--heading);
 }
 
 .cta .container span.blue-text {
@@ -205,3 +213,111 @@ header .top-nav {
 
     background-color: #006aff70;
 } */
+
+/* PARTNER SECTION */
+
+.partners {
+    display: grid;
+
+    place-items: center;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    background-color: #f3f3f3;
+}
+
+.partners h2 {
+    text-align: center;
+
+    color: rgb(131, 131, 131);
+
+    text-transform: capitalize;
+
+    font-size: 20px;
+}
+
+.partners .logos-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    justify-content: space-between;
+
+    width: 100%;
+}
+.partners .logos-section .image {
+    display: grid;
+    place-items: center;
+}
+
+.partners .customer-stories {
+    display: grid;
+    place-items: center;
+    color: var(--doBlue);
+}
+
+/* PRODUCT STORY */
+.title {
+    grid-area: title;
+}
+.list {
+    grid-area: list;
+}
+.product-info {
+    grid-area: product-info;
+}
+.product-story {
+    display: grid;
+    grid-template:
+        "title title title" auto
+        "list product-info product-info"
+        "list product-info product-info";
+
+    padding-top: 30px;
+    padding-bottom: 25px:;
+
+    gap: 5%;
+}
+
+.product-story .title h2 {
+    font-size: 25px;
+    text-align: center;
+    color: var(--heading);
+}
+
+.product-story .title p {
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-grey);
+}
+
+.product-story .list ul {
+    list-style-type: none;
+    border-left: 1px var(--text-grey) solid;
+    padding-left: 0.5em;
+    color: var(--text-grey);
+}
+
+.product-story .list ul li {
+    padding-bottom: 1em;
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    gap: 1em;
+
+    margin: ;
+}
+
+.product-info h3 {
+    color: var(--heading);
+    font-size: 17px;
+
+    padding: 0.7em 0;
+}
+.product-info p {
+    color: var(--text-grey);
+}
