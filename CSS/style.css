@@ -281,6 +281,7 @@ main {
 }
 .product-info {
     grid-area: product-info;
+    padding-left: 40px;
 }
 .product-story .container {
     display: grid;
@@ -289,8 +290,6 @@ main {
         "list product-info product-info" auto
         "list product-info product-info" auto/
         auto auto auto;
-
-    gap: 5%;
 }
 
 .product-story .list ul {
