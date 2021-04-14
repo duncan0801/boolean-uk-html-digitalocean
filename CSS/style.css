@@ -5,6 +5,9 @@
     font-family: Inter-Medium, Helvetica, sans-serif;
     font-size: 14px;
 }
+/* body:not(.background-video) {
+    z-index: -3;
+} */
 
 h2:not(.title) {
     font-size: 25px;
@@ -40,6 +43,14 @@ header.wrapper {
 }
 
 /* NAV BAR */
+nav {
+    position: fixed;
+    top: 0px;
+
+    background-color: white;
+    width: 100%;
+    z-index: 5;
+}
 header .top-nav {
     display: grid;
     grid-template-columns: 0.6fr 1fr 1fr;
@@ -83,12 +94,14 @@ header .top-nav {
 }
 
 /* DESCRIPTION & CTA */
+main {
+    position: relative;
+    top: 65px;
+}
 .description {
-    background-image: url(//d9hhrg4mnvzow.cloudfront.net/try.digitalocean.com/developerbrand/4fae3026-bg-hero-do-v4.svg);
-
     height: fit-content;
 
-    overflow: hidden;
+    background-color: #006aff60;
 
     display: grid;
     place-items: center;
@@ -101,9 +114,7 @@ header .top-nav {
 
     gap: 3%;
 
-    place-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    place-items: center stretch;
 
     height: 100%;
 }
@@ -207,26 +218,17 @@ header .top-nav {
 }
 
 /* BACKGROUND VIDEO */
-/* .background-video {
+.background-video {
     position: absolute;
-    top: 65px;
+    top: 0px;
 
     width: 100%;
-    object-fit: contain;
-    z-index: -2;
-} */
-
-/* .video-overlay {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
-    z-index: (-1);
+    height: 700px;
+    object-fit: cover;
+    z-index: -1;
 
     overflow: hidden;
-
-    background-color: #006aff70;
-} */
+}
 
 /* PARTNER SECTION */
 
@@ -430,6 +432,7 @@ footer {
 footer .text {
     text-align: left;
     font-size: 12px;
+    padding: 2px 0;
 }
 
 footer .text.copyright {
@@ -457,6 +460,6 @@ footer .extra-links p {
 
 footer .extra-links a {
     display: block;
-    color: var(--text-grey);
+    color: rgb(194, 194, 194);
     padding: 5px 0;
 }
