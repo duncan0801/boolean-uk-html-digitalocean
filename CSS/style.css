@@ -6,6 +6,19 @@
     font-size: 14px;
 }
 
+h2:not(.title) {
+    font-size: 25px;
+    text-align: center;
+    color: var(--heading);
+    padding: 25px 0;
+}
+
+p:not(.title) {
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-grey);
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -15,7 +28,7 @@ a {
     --doBlue: #006aff;
     --heading: #01214e;
     --text-grey: #706f6f;
-     
+    --bg-grey: #f3f3f3;
 }
 
 .wrapper {
@@ -31,8 +44,6 @@ header .top-nav {
     grid-gap: 2vw;
 
     height: 65px;
-
-    /* padding: 0 10%; */
 }
 .logo-container {
     display: grid;
@@ -88,8 +99,8 @@ header .top-nav {
     gap: 3%;
 
     place-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     height: 100%;
 }
@@ -100,7 +111,6 @@ header .top-nav {
 
     display: grid;
     place-items: center;
-  
 }
 .information .title {
     font-size: 44px;
@@ -230,7 +240,7 @@ header .top-nav {
 .partners h2 {
     text-align: center;
 
-    color: rgb(131, 131, 131);
+    color: var(--text-grey);
 
     text-transform: capitalize;
 
@@ -266,35 +276,25 @@ header .top-nav {
 .product-info {
     grid-area: product-info;
 }
-.product-story {
+.product-story .container {
     display: grid;
     grid-template:
         "title title title" auto
-        "list product-info product-info"
-        "list product-info product-info";
+        "list product-info product-info" auto
+        "list product-info product-info" auto/
+        auto auto auto;
 
-    padding-top: 30px;
-    padding-bottom: 25px:;
+    padding-top: 5em;
+    padding-bottom: 5em;
 
     gap: 5%;
-}
-
-.product-story .title h2 {
-    font-size: 25px;
-    text-align: center;
-    color: var(--heading);
-}
-
-.product-story .title p {
-    font-size: 18px;
-    text-align: center;
-    color: var(--text-grey);
 }
 
 .product-story .list ul {
     list-style-type: none;
     border-left: 1px var(--text-grey) solid;
     padding-left: 0.5em;
+    margin-left: 5em;
     color: var(--text-grey);
 }
 
@@ -308,8 +308,6 @@ header .top-nav {
     grid-template-rows: auto auto;
 
     gap: 1em;
-
-    margin: ;
 }
 
 .product-info h3 {
@@ -319,5 +317,21 @@ header .top-nav {
     padding: 0.7em 0;
 }
 .product-info p {
-    color: var(--text-grey);
+    text-align: left;
+}
+
+/* SCROLL AREA */
+.image-scroll {
+    display: grid;
+    grid-auto-rows: auto;
+
+    place-items: center;
+
+    background-color: var(--bg-grey);
+}
+.image-scroll img {
+    max-width: 500px;
+}
+.image-scroll p {
+    padding: 2em 0;
 }
