@@ -10,7 +10,7 @@ h2:not(.title) {
     font-size: 25px;
     text-align: center;
     color: var(--heading);
-    padding: 25px 0;
+    padding: 30px 0;
 }
 
 p:not(.title) {
@@ -33,7 +33,7 @@ a {
 
 .wrapper {
     max-width: 100%;
-    padding: 0 10%;
+    padding: 3em 10%;
 }
 
 /* NAV BAR */
@@ -334,4 +334,62 @@ header .top-nav {
 }
 .image-scroll p {
     padding: 2em 0;
+}
+
+/* FEATURES */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: stretch;
+    gap: 2em;
+}
+
+.feature {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1em;
+}
+
+.features p {
+    text-align: left;
+}
+
+/* REGIONS */
+.region {
+    background: linear-gradient(180deg, #0048ff 0%, #0031ad 80%);
+}
+
+.region .table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.region .table .row {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    border-bottom: 1px white solid;
+
+    padding: 5px;
+}
+
+.region .table .test-speed {
+    text-align: right;
+}
+.region .table .test-speed a {
+    color: rgb(64, 179, 224);
+}
+.region h2 {
+    color: white;
+}
+
+.region .table p {
+    color: white;
+    font-size: 14px;
+}
+
+.region .table .code {
+    font-weight: 700;
 }
